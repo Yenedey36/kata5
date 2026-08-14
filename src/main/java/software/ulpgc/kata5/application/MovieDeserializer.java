@@ -1,6 +1,6 @@
-package software.ulpgc.kata4.application;
+package software.ulpgc.kata5.application;
 
-import software.ulpgc.kata4.model.Movie;
+import software.ulpgc.kata5.model.Movie;
 
 public class MovieDeserializer {
     public static Movie fromTsv(String line) {

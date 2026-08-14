@@ -1,19 +1,17 @@
-package software.ulpgc.kata4.application;
+package software.ulpgc.kata5.application;
 
-import software.ulpgc.kata4.io.MovieLoader;
-import software.ulpgc.kata4.model.Movie;
+import software.ulpgc.kata5.io.Store;
+import software.ulpgc.kata5.model.Movie;
 
 import java.io.*;
 import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Stream;
 import java.util.zip.GZIPInputStream;
 
-public class RemoteStore implements MovieLoader {
+public class RemoteStore implements Store {
     private static final String REMOTE_URL = "https://datasets.imdbws.com/title.basics.tsv.gz";
     private static final int BUFFER_SIZE = 65536;
     private final Function<String, Movie> deserializer;
