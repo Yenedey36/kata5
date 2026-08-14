@@ -2,7 +2,7 @@ package software.ulpgc.kata4.application;
 
 import software.ulpgc.kata4.model.Movie;
 
-public class TsvMovieParser {
+public class MovieDeserializer {
     public static Movie fromTsv(String line) {
         return from(line.split("\t"));
     }
