@@ -34,7 +34,7 @@ public class Desktop extends JFrame {
     }
 
     private Histogram histogram() {
-        return HistogramBuilder.with(store.movies().limit(1000))
+        return HistogramBuilder.with(store.movies().filter(m -> m.year() > 0))
                 .title("Movies per year")
                 .x("Year")
                 .y("Count")

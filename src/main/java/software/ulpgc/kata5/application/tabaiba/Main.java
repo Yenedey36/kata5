@@ -2,7 +2,6 @@ package software.ulpgc.kata5.application.tabaiba;
 
 import software.ulpgc.kata5.application.*;
 import software.ulpgc.kata5.model.Movie;
-
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,4 +25,5 @@ public class Main {
         Stream<Movie> movies = new RemoteStore(MovieDeserializer::fromTsv).movies();
         new DatabaseRecorder(con).record(movies);
     }
-}
+} 
+
