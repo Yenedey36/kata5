@@ -27,6 +27,8 @@ public class DatabaseRecorder implements Recorder {
     @Override
     public void record(Stream<Movie> movies) throws SQLException {
         movies.forEach(movie -> this.record(movie));
+        flush();
+        connection.commit();
     }
 
     private void record(Movie movie) {
