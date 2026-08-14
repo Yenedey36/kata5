@@ -37,8 +37,8 @@ public class DatabaseStore implements Store {
         return new Movie(
                 rs.getString("title"),
                 rs.getInt("year"),
-                rs.getInt("duration");
-        )
+                rs.getInt("duration")
+        );
     }
 
     private ResultSet query() throws SQLException {
